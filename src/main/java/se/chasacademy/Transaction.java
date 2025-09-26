@@ -10,6 +10,7 @@ public class Transaction {
         this.amount = amount;
     }
 
+
     public double getAmount() {
         return amount;
     }

@@ -46,6 +46,7 @@ public class Main {
 
                 saldo += transaction.getAmount();
 
+
                 System.out.println(transaction);
             }
 
