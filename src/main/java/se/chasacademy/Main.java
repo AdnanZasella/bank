@@ -51,7 +51,7 @@ public class Main {
 
                     // Uppdatera saldo
                     saldo += transaction.getAmount();
-                    
+
 
                     // Skriv ut transaktionen
                     System.out.println(transaction);
