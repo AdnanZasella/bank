@@ -36,18 +36,25 @@ public class Main {
 
                 System.out.println(transaction);
 
-            } else if (val == 2) {
+            }
 
+            else if (val == 2) {
                 System.out.println("Hur mycket pengar vill du dra ut? ");
-
                 double amount = sc.nextDouble();
 
-                Transaction transaction = new Transaction(- amount);
+                // Kontrollera om det finns tillräckligt saldo
+                if (amount > saldo) {
+                    System.out.println("⚠️ Uttag nekas! Du har inte tillräckligt saldo.");
+                } else {
+                    // Skapa transaktion med negativt belopp
+                    Transaction transaction = new Transaction(-amount);
 
-                saldo += transaction.getAmount();
+                    // Uppdatera saldo
+                    saldo += transaction.getAmount();
 
-
-                System.out.println(transaction);
+                    // Skriv ut transaktionen
+                    System.out.println(transaction);
+                }
             }
 
             else if (val == 3) {
